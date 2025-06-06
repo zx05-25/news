@@ -69,9 +69,9 @@ function adjustMobileDotPosition() {
    
         // 基于用户需求调整红点定位参数
     dots[0].style.top = `${imageRect.height * 0.3}px`; // 30%高度
-    dots[0].style.left = `${imageRect.width * 0.5}px`; // 50%宽度
+    dots[0].style.left = `${imageRect.width * 0.55}px`; // 55%宽度
     dots[1].style.top = `${imageRect.height * 0.3}px`; // 30%高度
-    dots[1].style.left = `${imageRect.width * 0.3}px`; // 30%宽度
+    dots[1].style.left = `${imageRect.width * 0.4}px`; // 40%宽度
 }
 
 // 页面加载和窗口调整时触发
