@@ -55,14 +55,18 @@ cards.forEach(card => {
     });
 });
 
-// 绑定红点点击事件
+// 绑定红点点击事件（兼容移动端触摸）
 document.querySelectorAll('.dot').forEach(dot => {
-    dot.addEventListener('click', () => {
-        // 从title属性提取人物key（需保证title格式为"点击查看xxx信息"）
-        const personKey = dot.title.includes('马克龙') ? 'macron' : 'chinese-leader';
-        openModal(personKey);
-    });
+    dot.addEventListener('click', handleDotClick);
+    dot.addEventListener('touchend', handleDotClick); // 改为触摸结束时触发，避免误触
 });
+
+function handleDotClick(e) {
+    e.preventDefault();
+    const personKey = e.currentTarget.title.includes('马克龙') ? 'macron' : 'chinese-leader';
+    openModal(personKey);
+}
+
 
 // 点击关闭按钮或模态框外区域关闭
 closeBtn.addEventListener('click', closeModal);
