@@ -53,6 +53,20 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     position: relative; /* 为绝对定位的小红点提供参考 */
+    max-width: 100%; /* 限制最大宽度 */
+}
+@media (max-width: 768px) {
+    .main-image {
+        margin: 1rem 0;
+    }
+    .feature-image {
+        height: auto; /* 移动端保持图片比例 */
+    }
+    .dot {
+        width: 14px; /* 移动端增大红点尺寸 */
+        height: 14px;
+        border-width: 3px;
+    }
 }
 
 .dot {
