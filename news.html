@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2019马克龙访华：中法建交55周年的友好之旅</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <main class="container">
+        <header class="header">
+            <h1>2019年中法建交55周年·马克龙总统访华纪实</h1>
+            <p class="date">2019年11月4日-6日</p>
+        </header>
+
+        <div class="main-image">
+            <img src="19年马克龙访华.jpeg" alt="2019年马克龙访华全景" class="feature-image" usemap="#personMap">
+        <map name="personMap">
+            <area shape="polygon" coords="620,200,780,200,780,400,620,400" data-person="macron" alt="马克龙" title="点击查看马克龙信息">
+            <area shape="polygon" coords="220,170,380,170,380,380,220,380" data-person="chinese-leader" alt="中国领导人" title="点击查看中国领导人信息">
+        </map>
+
+        <!-- 微调红点left坐标至人物右侧边缘 -->
+        <div class="dot" style="top:420px; left:700px;" title="点击查看马克龙信息"></div>
+        <div class="dot" style="top:400px; left:440px;" title="点击查看中方领导人信息"></div>
+
+        <section class="timeline" style="margin-top: 2rem;">
+            <h2>访问时间线</h2>
+            <ul>
+                <li>11月4日：抵达北京，举行欢迎仪式</li>
+                <li>11月5日：与中国领导人会谈，签署多项合作协议</li>
+                <li>11月6日：参观文化遗址，出席中法企业合作论坛</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
