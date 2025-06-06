@@ -66,11 +66,12 @@ function adjustMobileDotPosition() {
     if (!mainImage) return;
     const imageRect = mainImage.getBoundingClientRect();
     const dots = document.querySelectorAll('.dot');
-    // 基于图片容器尺寸计算相对位置（最终优化参数）
-    dots[0].style.top = `${imageRect.height * 0.26}px`; // 26%高度（精准上移）
-    dots[0].style.left = `${imageRect.width * 0.75}px`; // 75%宽度（精准右移）
-    dots[1].style.top = `${imageRect.height * 0.3}px`; // 30%高度（精准上移）
-    dots[1].style.left = `${imageRect.width * 0.35}px`; // 35%宽度（精准右移）
+   
+        // 基于用户需求调整红点定位参数
+    dots[0].style.top = `${imageRect.height * 0.5}px`; // 50%高度
+    dots[0].style.left = `${imageRect.width * 0.3}px`; // 30%宽度
+    dots[1].style.top = `${imageRect.height * 0.5}px`; // 50%高度
+    dots[1].style.left = `${imageRect.width * 0.5}px`; // 50%宽度
 }
 
 // 页面加载和窗口调整时触发
