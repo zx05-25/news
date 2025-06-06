@@ -60,6 +60,23 @@ document.querySelectorAll('.dot').forEach(dot => {
     dot.addEventListener('click', handleDotClick);
     dot.addEventListener('touchend', handleDotClick); // 改为触摸结束时触发，避免误触
 });
+// 动态计算移动端红点位置
+function adjustMobileDotPosition() {
+    const mainImage = document.querySelector('.main-image');
+    if (!mainImage) return;
+    const imageRect = mainImage.getBoundingClientRect();
+    const dots = document.querySelectorAll('.dot');
+    // 基于图片容器尺寸计算相对位置（最终优化参数）
+    dots[0].style.top = `${imageRect.height * 0.26}px`; // 26%高度（精准上移）
+    dots[0].style.left = `${imageRect.width * 0.75}px`; // 75%宽度（精准右移）
+    dots[1].style.top = `${imageRect.height * 0.3}px`; // 30%高度（精准上移）
+    dots[1].style.left = `${imageRect.width * 0.35}px`; // 35%宽度（精准右移）
+}
+
+// 页面加载和窗口调整时触发
+window.addEventListener('load', adjustMobileDotPosition);
+window.addEventListener('resize', adjustMobileDotPosition);
+
 
 function handleDotClick(e) {
     e.preventDefault();
